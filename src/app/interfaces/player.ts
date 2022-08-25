@@ -1,4 +1,7 @@
+import { Category } from "../enums/category";
+
 export interface Player {
     name:string,
-    age:number
+    age:number,
+    enumType:Category
 }

@@ -1,21 +1,9 @@
 {{title}}
 
-<div *ngFor="let name of names; index as i">
-  {{i}}: {{name}}
+<div *ngFor="let player of players; index as i">
+  {{Category[player.enumType]}}
 </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let name of names">
-      <td>{{name | lowercase}}</td>
-    </tr>
-  </tbody>
-</table>
 
 <div *ngIf="isValid; else else_block">
   The isValid variable is true so this is showing.

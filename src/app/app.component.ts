@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Category } from './enums/category';
 import { Player } from './interfaces/player';
 
 @Component({
@@ -11,15 +12,17 @@ export class AppComponent {
 
   counter:number = 0;
 
-  names:string[] = ['bob', 'jane', 'matthew', 'george'];
+  names:string[] = [Category[Category.Dinner], 'jane', 'matthew', 'george'];
 
   price:number = 10.25;
 
   isValid:boolean = false;
 
+  Category = Category;
+
   players:Player[] = [
-    {name: 'Bob', age: 10},
-    {name: 'Steve', age: 15},
-    {name: 'George', age :100}
+    {name: 'blah', age: 10, enumType: Category.Breakfast},
+    {name: 'Steve', age: 15, enumType: Category.Breakfast},
+    {name: 'George', age :100, enumType: Category.Breakfast}
   ];
 }
